@@ -31,7 +31,9 @@
                                 <img src="{{ asset('image/images.png')}}" class="img-thumbnail shadow-sm mt-5"/>
                                 @endif
                                 @else
-                                <img src="{{ asset('storage/'.Auth::user()->image) }}" class="img-thumbnail shadow-sm mt-5"/>
+                                <div class="text-center mb-5">
+                                    <img src="{{ asset('storage/'.Auth::user()->image) }}" class="img-thumbnail shadow-sm mt-5"/>
+                                </div>
                                 @endif
                                 <div class="form-group mt-1">
                                     <label for="cc-payment" class="control-label mb-1">Edit your profile picture</label>

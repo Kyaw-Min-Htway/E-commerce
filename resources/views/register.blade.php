@@ -64,7 +64,9 @@
             @enderror
         </div>
 
-        <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">register</button>
+        <a href="{{ route('user#home')}}">
+            <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">register</button>
+        </a>
 
     </form>
     <div class="register-link">

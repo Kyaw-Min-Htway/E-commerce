@@ -5,7 +5,7 @@
      <div class="container-fluid">
         <div class="row px-xl-5">
             <div class="col-lg-8 offset-2 table-responsive mb-5">
-                <table class="table table-light table-borderless table-hover text-center mb-0"  id="table">
+                <table class="table table-light table-borderless table-hover text-center mb-0 col-lg-12 col-md-8 col-sm-4 "  id="table">
                     <thead class="thead-dark">
                         <tr>
                             <th>Date</th>

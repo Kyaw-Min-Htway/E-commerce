@@ -68,7 +68,7 @@
                                     {{$o->order_code }}
                                 </a>
                             </td>
-                            <td>{{$o->price }} Kyats</td>
+                            <td>{{$o->total_price }} Kyats</td>
                             <td>
                                 <select name="" id="statusChange" class="form-control">
                                     <option value="0" @if ($o->status == 0) selected @endif>
