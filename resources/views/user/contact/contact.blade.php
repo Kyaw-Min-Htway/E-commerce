@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <i class="fa fa-caret-left"></i>
-                        <form action="">
+                        <form action="#">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Your Name</label>
                                 <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp">

@@ -52,6 +52,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('delete/{id}',[AdminController::class,'delete'])->name('admin#delete');
         Route::get('role/change/{id}',[AdminController::class,'roleChange'])->name('role#change');
         Route::post('changed/{id}',[AdminController::class,'changed'])->name('changed');
+        Route::get('message',[AdminController::class,'message'])->name('admin#message');
     });
     // user
     // home

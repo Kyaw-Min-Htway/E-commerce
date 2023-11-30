@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Content;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -35,6 +36,12 @@ class AdminController extends Controller
         User::where('id',$id)->delete();
 
         return redirect()->route('admin#list')->with(['info'=>'Account deleted ...']);
+    }
+
+    public function message(){
+        $data = Content::orderBy('created_at','desc')->get();
+
+        return view('admin.message.message',compact('data'));
     }
 
     public function roleChange($id){

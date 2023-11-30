@@ -62,6 +62,10 @@
                             <a href="{{ route('order#list')}}">
                                 <i class="fa-solid fa-book"></i>Order List</a>
                         </li>
+                        <li>
+                            <a href="{{ route('admin#message')}}">
+                                <i class="fa-solid fa-message"></i>Message List</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
