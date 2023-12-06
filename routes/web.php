@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('update',[ProductController::class,'update'])->name('product#update');
     });
 
-    Route::group(['prefix' => 'admin'],function(){
+    Route::group(['prefix' => 'admin','middleware' => 'admin_auth'],function(){
         Route::get('password/change',[AdminController::class,"changePasswordPage"])->name('admin#changePasswordPage');
         Route::post('password/change',[AdminController::class,"changePassword"])->name('admin#changePassword');
         Route::get('detail',[AdminController::class,'changeDetail'])->name('admin#detail');
@@ -80,7 +80,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(['prefix' => 'user'],function(){
+Route::group(['prefix' => 'user','middleware' => 'user_auth'],function(){
     Route::get('changePassword',[UserController::class,'changePassword'])->name('user#changePassword');
     Route::get('details',[UserController::class,'details'])->name('user#details');
     Route::post('update/details/{id}',[UserController::class,'update'])->name('user#update');
