@@ -15,7 +15,7 @@
                             <h3 class="text-center title-2">Account Profile</h3>
                         </div>
                         <hr>
-                       <form action="{{ route('user#update',Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
+                       <form action="{{ route('admin#update',Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                                 <div class="form-group mt-4">
                                     <label for="cc-payment" class="control-label ">Name</label>

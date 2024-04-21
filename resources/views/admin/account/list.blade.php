@@ -12,9 +12,13 @@
                 <!-- DATA TABLE -->
                 <div class="table-data__tool">
                     <div class="table-data__tool-left">
-                        <div class="overview-wrap">
+                        <div class="">
                             <h2 class="title-1">User List</h2>
-
+                        </div>
+                    </div>
+                    <div class="table-data__tool-right">
+                        <div class="btn btn-secondary">
+                           <a href="{{route('export#user')}}"> <h2 class="title-1">Exports</h2></a>
                         </div>
                     </div>
                 </div>

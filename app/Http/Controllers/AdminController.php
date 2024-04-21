@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use Storage;
 use Carbon\Carbon;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
@@ -20,11 +22,15 @@ class AdminController extends Controller
                   ->orwhere('email','like','%'.request('key').'%')
                   ->orwhere('address','like','%'.request('key').'%');
         })
-        ->paginate(3);
+        ->paginate(10);
 
         $admin->appends(request()->all());
 
         return view('admin.account.list',compact('admin'));
+    }
+
+    public function export_user(){
+        return Excel::download(new UsersExport, 'users-data.xlsx');
     }
     //change password page
     public function changePasswordPage(){

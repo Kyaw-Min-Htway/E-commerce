@@ -105,3 +105,5 @@ Route::prefix('order')->group(function(){
     Route::get('change',[OrderController::class,'statusChange']);
     Route::get('list/info/{orderCode}',[OrderController::class,'listInfo'])->name('list#info');
 });
+
+Route::get('/export_user',[AdminController::class,'export_user'])->name('export#user');

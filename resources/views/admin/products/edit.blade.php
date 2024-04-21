@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
-                            <h3 class="text-center title-2">Pizza Edit</h3>
+                            <h3 class="text-center title-2">Product Edit</h3>
                         </div>
                         <hr>
                        <form action="{{ route('product#update') }}" method="POST" enctype="multipart/form-data">

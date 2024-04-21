@@ -66,6 +66,10 @@
                             <a href="{{ route('admin#message')}}">
                                 <i class="fa-solid fa-message"></i>Message List</a>
                         </li>
+                        <li>
+                            <a href="{{route('admin#list')}}">
+                                <i class="fa-solid fa-users"></i>User List</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -166,12 +170,6 @@
                                                 <div class="account-dropdown__item">
                                                     <a href="{{route('admin#detail')}}">
                                                         <i class="fa-solid fa-user"></i>Account</a>
-                                                </div>
-                                            </div>
-                                            <div class="account-dropdown__body">
-                                                <div class="account-dropdown__item">
-                                                    <a href="{{route('admin#list')}}">
-                                                        <i class="fa-solid fa-users"></i>User List</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">

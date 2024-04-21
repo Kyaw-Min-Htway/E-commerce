@@ -24,5 +24,7 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin',
             'password' => Hash::make('admin123')
         ]);
+
+        User::factory()->count(20)->create();
     }
 }
