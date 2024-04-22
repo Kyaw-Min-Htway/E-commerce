@@ -221,34 +221,35 @@
    <script>
      $(document).ready(function(){
 
-        $.ajax({
-            type : 'get',
-            url : 'http://localhost:8000/ajax/pizza/view/count' ,
-            data : { 'productId'  : $('#pizzaId').val() } ,
-            dataType : 'json' ,
-        })
+$.ajax({
+    type : 'get',
+    url : 'http://localhost:8000/ajax/pizza/view/count' ,
+    data : { 'productId'  : $('#pizzaId').val() } ,
+    dataType : 'json' ,
+});
 
-        $('#cartBtn').click(function(){
-            $source = {
-                'userId' : $('#userId').val(),
-                'pizzaId' : $('#pizzaId').val(),
-                'count' : $('#orderCount').val()
-            };
+$('#cartBtn').click(function(){
+    $source = {
+        'userId' : $('#userId').val(),
+        'pizzaId' : $('#pizzaId').val(),
+        'count' : $('#orderCount').val()
+    };
+    console.log($source);
 
+    $.ajax({
+        type : 'get' ,
+        url  : 'http://localhost:8000/ajax/pizza/list/count' ,
+        data :  $source ,
+        dataType : 'json' ,
+        success  : function(response){
+            if(response.status == 'success'){
+                window.location.href = 'http://localhost:8000/user/home';
+            }
+        }
+    });
+});
+});
 
-            $.ajax({
-                type : 'get' ,
-                url  : 'http://localhost:8000/ajax/pizza/list/count' ,
-                data :  $source ,
-                dataType : 'json' ,
-                success  : function(response){
-                    if(response.status == 'success'){
-                        window.location.href = 'http://localhost:8000/user/home';
-                    }
-                }
-            })
-        })
-    })
    </script>
 @endsection
 
